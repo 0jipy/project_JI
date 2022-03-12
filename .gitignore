@@ -8,6 +8,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# jiadd
+99.Download/
+
 # C extensions
 *.so
 
