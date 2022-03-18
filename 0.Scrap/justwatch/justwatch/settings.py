@@ -12,27 +12,12 @@ BOT_NAME = 'justwatch'
 SPIDER_MODULES = ['justwatch.spiders']
 NEWSPIDER_MODULE = 'justwatch.spiders'
 
-# 커스텀 셋팅 출력 및 저장 관련 (예전엔 셋팅에 있었다가 사라진 것으로 보임)
-# FEED_EXPORT_FIELDS=[출력순서]
-FEED_EXPORT_FIELDS=['a_title_kor', 'b_opening_date', 'c_just_rating', 'imdb_rating', 
-                    'genre', 'runtime', 'director', 'actors', 'synopsis'] 
-# 엑셀(csv) 한글깨짐
-FEED_EXPORT_ENCODING="utf-8-sig"
-
-# 필요시 지우기
-FEED_URI = 'result1.json'
-FEED_FORMAT = 'json'
-FEED_EXPORT_ENCODING = 'utf-8'
-
-FEED_EXPORT_INDENT = 2
-
-
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'justwatch (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -40,7 +25,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1   # 0313  3 활성화 1로 수정  속도차이가 확실히 난다.
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -59,16 +44,15 @@ DOWNLOAD_DELAY = 1   # 0313  3 활성화 1로 수정  속도차이가 확실히 
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
-SPIDER_MIDDLEWARES = {
-   'justwatch.middlewares.JustwatchSpiderMiddleware': 543,
-} # 미들웨어 오픈 0313
+# SPIDER_MIDDLEWARES = {
+#    'justwatch.middlewares.JustwatchSpiderMiddleware': 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-   'justwatch.middlewares.JustwatchDownloaderMiddleware': 543,
-} # 미들웨어 다운로드 오픈 0313
+#DOWNLOADER_MIDDLEWARES = {
+#    'justwatch.middlewares.JustwatchDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -78,9 +62,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'justwatch.pipelines.JustwatchPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'justwatch.pipelines.JustwatchPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

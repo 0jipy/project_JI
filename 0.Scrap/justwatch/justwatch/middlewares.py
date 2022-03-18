@@ -4,7 +4,6 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from time import sleep
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
@@ -64,13 +63,11 @@ class JustwatchDownloaderMiddleware:
 
     @classmethod
     def from_crawler(cls, crawler):
-        print("+++++This is middle man youngman middle man ++++")
         # This method is used by Scrapy to create your spiders.
         s = cls()
         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
         return s
 
-    ## 리퀘스트에 작성하는 크롬 페이지 다운 등의 코드 어떻게 사용? feat 영맨
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
