@@ -14,6 +14,7 @@ import sys
 
 # from justwatch import justwatch
 
+# class Start
 
 
 
@@ -37,6 +38,14 @@ class Just1Spider(scrapy.Spider):
 
         a=2021 # 시작년도
         b=2023 # 끝년도
+
+        ## year 부분을 데이터를 돌아야할 URL뭉치를 만들고자 함. 
+        # ex 는 넷플뭉치 왓챠뭉치. 디즈니 뭉치. 웨이브 뭉치. 아쉽지만 중복제거는 df로 처리할때 하기로
+        # ott_urls = []
+        # for year in ott_urls: 
+
+
+
         input_urls = []
 
         for year in map(str, range(a, b)):

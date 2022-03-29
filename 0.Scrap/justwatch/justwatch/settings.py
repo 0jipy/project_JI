@@ -62,9 +62,13 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+
+#0323 수정 'justwatch.pipelines.JustwatchPipeline': 300, 에서 변경
+
 #ITEM_PIPELINES = {
-#    'justwatch.pipelines.JustwatchPipeline': 300,
+#    'justwatch.pipelines.MySQLPipeline': 800,
 #}
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -86,3 +90,9 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+# MYSQL pipe 0323추가
+ITEM_PIPELINES = {
+    'justwatch.pipelines.MySQLPipeline': 800,
+}
