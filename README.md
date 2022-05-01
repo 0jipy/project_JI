@@ -1,21 +1,15 @@
-# project_JI
-## project_hk_for highly intelligent struggles
-
-
-## Project : News Article Crawling & News Chatbot
-
+# project_MOVIS
+## OTT 플랫폼 영화 추천 시스템 무비스
 ## Short Description
-- Scrapy를 이용하여 네이버 뉴스 기사를 카테고리별로 크롤링하며, crontab을 통해 크롤링 자동화를 구축한다.
-- 크롤링한 데이터는 중복기사 제거 후 MongoDB에 저장되며, Discord 챗봇과 연동시켜 챗봇을 통해 원하는 뉴스 기사 또는 워드- 클라우드 이미지를 받아볼 수 있다.
+- Scrapy를 이용하여 OTT 영화정보를 크롤링 하여 AWS EC2 상의 MySQl에 저장한다. 
+- 문서유사도 및 그래프이론의 인접성을 활용하여 해당영화와 유사한 10개의 영화를 추천한다.
+- Django를 이용해 웹서비스를 구축후 추천시스템을 표현한다. 
+
+- 개발기간 : 2022.02.17 ~ 2022.04.01 (6주)
 
 ## Built With
-- [서기현] : News Chatbot 개발(NLP, Stopwords, WordCloud) / 발표 및 README 작성
-- [유승균] : News Chatbot 개발 및 관리(NLP, Stopwords, WordCloud) / 개인 AWS server 활용
-- [이기중] : Naver 뉴스기사 크롤링 및 자동화(Scrapy, Crontab) / MongoDB 관리 / 개인 AWS server 활용 / 팀 리더
-- [김종찬] : 뉴스기사 중복제거(TF-IDF, Cosine Similarity) / MongoDB 관리
-
+- [김영환] : 영화정보 크롤링, 웹페이지 개발 및 배포 (http://movis.duckdns.org/) / MySQL 관리
+- [강지원] : 영화정보 크롤링, 추천시스템 개발 (TF-IDF, Cosine Similarity) / 개인 AWS server 활용 / 팀 리더 
+- [김예아] : 데이터 전처리 및 데이터 분석, 회의록 및 보고서 작성.
 
 ----------------------------------------------------------
-
-
-- 여기는 표시가 안되나
